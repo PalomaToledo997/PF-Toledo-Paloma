@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Chicle&family=DynaPuff:wght@500&family=Edu+QLD+Beginner&family=Fascinate&family=Fuzzy+Bubbles:wght@700&family=Gantari:wght@100&family=IBM+Plex+Sans:wght@100&family=Inter:wght@100&family=Kdam+Thmor+Pro&family=Kenia&family=Macondo&family=Mukta:wght@700&family=Nerko+One&family=Open+Sans:wght@300&family=#37053b:wght@400;700&family=#37053b:wght@100&family=Raleway:ital,wght@0,100;1,100&family=Rubik+Moonrocks&family=Zen+Dots&display=swap');
+
+/* Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
+
+/* Cormorant SC */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    font-family:'raleway', sans-serif;
+}
+body{
+    font-family:'raleway', sans-serif;
+
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 15vh;
+    background-color: #a6c88c;
+    position: fixed;
+    top: 0px;
+    
+    
+}
+
+.logo {
+    width: 16vh;
+    height: 15vh;
+    
+}
+
+
+header ul li{
+    display: inline;
+    text-decoration: none;
+    margin: 5vh;
+    font-size: 20px;
+
+     
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu a{
+
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 550;
+    
+}
+
+.menu a:hover{
+    color:#fdfdfa;
+    text-decoration:underline;
+    font-weight: 600;
+    text-shadow: 1vh 1vh 5vh #37053b;
+}
+
+header img{
+    width: 16vh;
+    height: 15vh;
+    border-radius: 100%;
+    border-radius: 2px solid black;
+}
+
+/* SECTION TITULO */
+
+.titulo{
+    width: 100%;
+    height: 90vh;
+    background-image: url(img/bannerespejos.png);
+    background-size: cover;
+    margin-top: 15vh;;
+}
+
+/* US */
+
+.us{
+    width: 100%;
+    height: 75vh;
+    background-color:#e1ce8a;
+    text-align: justify;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.us p{
+    width: 50%;
+    text-align: justify;
+    margin-top: 20px;
+    
+
+}
+
+.us a{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    background-color: #fdfdfa;
+    text-decoration: none;
+    width: 100px;
+    margin: 20px;
+}
+
+.us a:hover {
+    background-color: #37053b;
+    color:#fdfdfa;
+    border: 2px solid #fdfdfa;
+
+}
+
+/* SECTION TALLERES */
+
+.talleres {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.talleres .card{
+    width: 45vh;
+    height: 55vh;
+    border-radius: 20%;
+    margin:30px;
+    text-align: center;
+    box-shadow: 1.5vh 1.5vh 1.5vh rgba(204, 201, 201, 0.671);
+    
+    
+    
+}
+
+.card img{
+    width: 220px;
+    height: 220px;
+    border-radius: 70%;
+}
+
+.card:hover{
+    background-color: #a6c88c;
+    box-shadow: 2vh 2vh 2vh rgba(180, 175, 175, 0.918);
+    
+    
+    
+}
+
+/* GALERIA */
+
+
+#galeria{
+    width: 100%;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 30px;
+    
+
+}
+
+.fotoGaleria{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.fotoGaleria img{
+    width: 250px;
+    height: 250px;
+    box-shadow: 5px 5px 10px black;
+
+
+}
+
+.galeriaTexto{
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+
+}
+
+.galeriaTexto h3{
+    width: 600px;
+    font-size: 50px;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+   
+}
+
+.galeriaTexto h3 span{
+    font-weight: 100;
+    font-size: 8vh;
+}
+
+#mainGaleria{
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* FOOTER */
+
+.divDivisor {
+    background-image: url(img/paleta-nuvemshop-37ab98.png);
+    width: 100%;
+    height: 2vh;
+    background-position: cover;
+    margin-top: 50px;
+}
+
+.logosFooter img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin: 10px;
+
+}
+
+.lista_1 li{
+    list-style-type: none;
+}
+
+.lista_2 li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+footer{
+
+    width: 100%;
+    height: auto;
+    background-color: #37ab98;
+
+    
+    
+}
+
+.footerListas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+
+}
+
+.footerListas a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.logosFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.logo_muni img{
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px #145a4e;
+}
+
+/* US */
+
+.usIndex{
+    background-image: url(img/RadioTeatro_foto1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* NOSOTROS */
+
+.dondeHabita {
+    width: 70%;
+    height: 250px;
+    background-color:rgba(250, 235, 215, 0.548);
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid wheat;
+}
+
+.dondeHabita h3{
+    font-size: 60px!important;
+    color:#fdfdfa;
+    font-family:'raleway', sans-serif;
+    text-shadow: 5px 5px 2px black;
+    /* -webkit-text-stroke: 0.5px black; */
+
+}
+
+.parrafoUs{
+    width: 60%;
+    height: auto;
+    justify-content: center;
+    margin: 20px;
+}
+
+#sectionUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+#sectionUs img{
+    width: 650px;
+    height: 400px;
+    margin: 20px;
+    
+}
+
+#sectionUs h3{
+    font-size: 30px;
+    margin: 20px;
+}
+
+/* SECCION NOTICIAS */
+
+#noticias{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+#noticias h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+}
+
+
+.fotoTeatro{
+    width: 50%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fotoTeatro img{
+    width: 460px;
+    height: 300px;
+    
+}
+
+.teatroTexto{
+    height: 300px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parrafoNoticia{
+    width: 60%;
+    text-align: justify;
+}
+
+
+.noticiaDiv{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid  #37053b;
+    margin-bottom: 30px;
+    
+}
+
+.bck{
+background-image: url(img/header.jpg);
+background-position: contain;
+}
+
+.audioRadio{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: #f6e58d;
+}
+
+.audioRadio audio{
+    margin: 20px;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 30px;
+}
+
+.radioTexto{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.radioTexto p{
+    color: #fdfdfa;
+}
+
+.radioTexto h3{
+    color: #fdfdfa;
+}
+
+
+.videoFestejo{
+    width: 50%;
+    background-color: black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.textoFestejo{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTACTO */
+
+.contacto{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    
+
+}
+
+.contacto_div{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(82, 80, 80);
+    
+}
+
+.contacto_div form{
+    
+    justify-content: center;
+}
+
+label, input{
+    margin:1vh ;
+}
+
+/* INDEX TALLERES */
+
+#sectionTalleres{
+    margin-top: 15vh;
+}
+
+.talleresBanner{
+    width: 100%;
+    height: 500px;
+    background-image: url(pinterest/floresblancasbanner.jpg);
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.divTalleresFrase{
+    width: 60%;
+    height: 60%;
+    background-color:#fdfdfac0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.divTalleresFrase h2{
+    font-size: 30px;
+    font-family: 'Cormorant SC',serif;
+    text-transform: capitalize;
+    width: 70%;
+    text-align: center;
+}
+
+.contenedorTalleres{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.divTalleres{
+    width: 50vh;
+    height: 80vh;
+    background-position: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #ddd3ad;
+}
+
+.divTalleres p{
+    background-color:#fdfdfac5;
+    
+}
+
+.divTango{
+    background-image: url(pinterest/pinturatango.jpg);
+
+}
+
+.divRadio{
+    background-image: url(pinterest/radiopintura.jpg);
+    background-position: center;
+}
+
+.divRadioteatro{
+    background-image: url(img/radioteatro.jpg);
+
+}
+
+.divMusica{
+    background-image: url(pinterest/pianopintura.jpg);
+}
+.divPlastica{
+    background-image: url(pinterest/plastica1.jpg);
+}
