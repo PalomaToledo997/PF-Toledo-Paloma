@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Chicle&family=DynaPuff:wght@500&family=Edu+QLD+Beginner&family=Fascinate&family=Fuzzy+Bubbles:wght@700&family=Gantari:wght@100&family=IBM+Plex+Sans:wght@100&family=Inter:wght@100&family=Kdam+Thmor+Pro&family=Kenia&family=Macondo&family=Mukta:wght@700&family=Nerko+One&family=Open+Sans:wght@300&family=#37053b:wght@400;700&family=#37053b:wght@100&family=Raleway:ital,wght@0,100;1,100&family=Rubik+Moonrocks&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Oswald&family=Raleway:wght@300;600&display=swap');
 
 /* Playfair Display */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
@@ -7,17 +6,20 @@
 /* Cormorant SC */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
 
+/* Encode Sans */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap');
 
 *{
     margin:0;
     padding:0;
     font-size: 16px;
     line-height: 2.0;
-    font-family:'raleway', sans-serif;
+    /* font-family:'raleway', sans-serif; */
+    font-family: 'Encode Sans', sans-serif;
     box-sizing: border-box;
 }
 body{
-    font-family:'raleway', sans-serif;
+    font-family: 'Encode Sans', sans-serif;
 
 }
 
@@ -28,7 +30,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     background-color: #a6c88c;
     position: fixed;
     top: 0px;
@@ -62,7 +64,7 @@ header ul li{
     color: black;
     font-size: 20px;
     font-weight: 550;
-    
+  
 }
 
 .menu a:hover{
@@ -73,10 +75,11 @@ header ul li{
 }
 
 header img{
-    width: 16vh;
-    height: 15vh;
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
     border-radius: 2px solid black;
+    margin-left: 10px;
 }
 
 /* SECTION TITULO */
@@ -86,8 +89,62 @@ header img{
     height: 90vh;
     background-image: url(img/bannerespejos.png);
     background-size: cover;
-    margin-top: 15vh;;
+    margin-top: 13vh;;
 }
+
+
+/* ICONO WSP */
+
+.fa-whatsapp{
+    position: fixed;
+    right: 30px;
+    top: 100px;
+    animation-name: icono_wsp;
+    animation-iteration-count:initial;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+    animation-delay: 0s; 
+    transition: transform 1s;
+    border-radius: 100%;
+}
+
+.fa-whatsapp:hover{
+    transform: scale(1.2);
+    
+
+}
+
+
+
+@keyframes icono_wsp {
+    0% { 
+        transform: translatey(-200px);
+        opacity: 0%;
+    }
+
+    40% {
+        transform: translatey(0px);
+        opacity: 100%;
+
+    }
+
+    45%{
+        transform: translateY(40px);
+    }
+
+    60%{
+        transform: translateY(0px);
+    }
+
+    90%{ transform: scale(1.5);
+
+    }
+
+    100%{
+        transform: scale(1,1);
+    }
+}
+
 
 /* US */
 
@@ -201,8 +258,12 @@ header img{
     width: 250px;
     height: 250px;
     box-shadow: 5px 5px 10px black;
+    transition: transform 1s;
+}
 
-
+.fotoGaleria img:hover{
+    transform: scale(1.5);
+    filter: grayscale();
 }
 
 .galeriaTexto{
@@ -230,7 +291,7 @@ header img{
 }
 
 #mainGaleria{
-    margin-top: 15vh;
+    margin-top: 13vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,12 +311,14 @@ header img{
 }
 
 .logosFooter img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
-    margin: 10px;
+    margin: 10px;   
 
 }
+
+
 
 .lista_1 li{
     list-style-type: none;
@@ -270,7 +333,6 @@ footer{
 
     width: 100%;
     height: auto;
-    background-color: #37ab98;
 
     
     
@@ -291,6 +353,10 @@ footer{
     color: black;
 }
 
+.footerListas a:hover{
+    text-shadow: 0px 0px 10px black;
+}
+
 
 .logosFooter{
     display: flex;
@@ -302,8 +368,15 @@ footer{
 
 .logo_muni img{
     border-radius: 5%;
-    box-shadow: 10px 10px 5px #145a4e;
+    transition: transform 1s;
 }
+
+.logo_muni img:hover{
+    transform: scale(1.1,1.1);
+
+}
+
+
 
 /* US */
 
@@ -336,7 +409,6 @@ footer{
     color:#fdfdfa;
     font-family:'raleway', sans-serif;
     text-shadow: 5px 5px 2px black;
-    /* -webkit-text-stroke: 0.5px black; */
 
 }
 
@@ -351,7 +423,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 13vh;
 }
 
 #sectionUs img{
@@ -477,6 +549,7 @@ footer{
 
     box-shadow: 3px 3px 10px black;
     border-radius: 30px;
+    margin: 10px;
 }
 
 .radioTexto{
@@ -519,8 +592,6 @@ footer{
 .noticiaDiv{
     display: flex;
     border-bottom: 1.5px solid rgb(212, 207, 207);
-
-
 }
 
 
@@ -534,7 +605,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15vh;
+    margin-top: 13vh;
     
 
 }
@@ -562,7 +633,7 @@ label, input{
 /* INDEX TALLERES */
 
 #sectionTalleres{
-    margin-top: 15vh;
+    margin-top: 13vh;
 }
 
 .talleresBanner{
@@ -640,4 +711,79 @@ label, input{
 }
 .divPlastica{
     background-image: url(pinterest/plastica1.jpg);
+}
+
+/* CONTACTO */
+.contacto{
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto_div{
+    background-color: #f4f5f7;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(184, 181, 181);
+    height: 600px;
+    
+}
+
+.contacto_div h3{
+    margin: 20px;
+    font-size: 25px;
+} 
+
+.botonConsulta{
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+
+/* MOBILE FIRST */
+/* INDEX */
+@media screen and (max-width:480px) {
+    .talleres{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav{
+        width: auto;
+    }
+
+    .menu{
+        display: inline;
+        align-items: left;
+        
+    }
+
+    .menu a{
+        font-size: 14px;
+        
+    }
+
+    .menu li{
+        margin: 5px;   
+    }
+    .menu ul{
+        width: auto;
+    }
+    
+    .logo img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .us{
+        height: 800px;
+    }
+
+    .us p{
+        font-size: 16px;
+        width: 70%;
+    }
 }
