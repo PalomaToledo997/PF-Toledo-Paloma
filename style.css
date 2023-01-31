@@ -14,7 +14,6 @@
     padding:0;
     font-size: 16px;
     line-height: 2.0;
-    /* font-family:'raleway', sans-serif; */
     font-family: 'Encode Sans', sans-serif;
     box-sizing: border-box;
 }
@@ -30,17 +29,21 @@ header{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 13vh;
+    height: 110px;
     background-color: #a6c88c;
     position: fixed;
     top: 0px;
+    z-index: 2;
     
     
 }
 
 .logo {
-    width: 16vh;
-    height: 15vh;
+    width: 100px;
+    height: 110pxvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -67,6 +70,25 @@ header ul li{
   
 }
 
+.navbar{
+    background-color: #a6c88cb2;
+    height: 100px;
+}
+
+.navbar-toggler{
+    background-color: #8fac7a;
+}
+
+.nav-item{
+    text-align: center;
+}
+
+.nav-item:hover{
+    background-color:#8fac7a;
+    text-align: center;
+    border-radius: 5px;
+}
+
 .menu a:hover{
     color:#fdfdfa;
     text-decoration:underline;
@@ -74,7 +96,7 @@ header ul li{
     text-shadow: 1vh 1vh 5vh #37053b;
 }
 
-header img{
+.logo-nav{
     width: 90px;
     height: 90px;
     border-radius: 100%;
@@ -82,20 +104,19 @@ header img{
     margin-left: 10px;
 }
 
-/* SECTION TITULO */
+/* CARRUSEL */
 
-.titulo{
-    width: 100%;
-    height: 90vh;
-    background-image: url(img/bannerespejos.png);
-    background-size: cover;
-    margin-top: 13vh;;
+.carousel-inner{
+    height: 100vh;
+    margin-top: 110px;
 }
+
+
 
 
 /* ICONO WSP */
 
-.fa-whatsapp{
+#icono_wsp{
     position: fixed;
     right: 30px;
     top: 100px;
@@ -108,7 +129,7 @@ header img{
     border-radius: 100%;
 }
 
-.fa-whatsapp:hover{
+#icono_wsp:hover{
     transform: scale(1.2);
     
 
@@ -144,6 +165,50 @@ header img{
         transform: scale(1,1);
     }
 }
+
+
+/* BTS */
+
+.main-nosotros{
+    width: 100%;
+    height: 400px;
+    background-color:#e1ce8a;
+    text-align: justify;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* footer con bts */
+
+.f-enlaces li {
+    list-style-type: none;
+}
+ .f-enlaces a{
+    text-decoration: none;
+    color: black;
+ }
+
+ .f-enlaces a:hover{
+    color: cadetblue;
+    text-shadow: 2px 2px 10px #8fac7a;
+ }
+
+ .f-info li{
+    list-style-type: none;
+ }
+
+ .f-info a{
+    color: black;
+    text-decoration: none;
+ }
+
+ .f-info a:hover{
+    color: cadetblue;
+    text-shadow: 2px 2px 10px #8fac7a;
+ }
 
 
 /* US */
@@ -207,6 +272,7 @@ header img{
     text-align: center;
     box-shadow: 1.5vh 1.5vh 1.5vh rgba(204, 201, 201, 0.671);
     transition: transform 2s;
+    
 
     
     
@@ -220,7 +286,7 @@ header img{
 }
 
 .card:hover{
-    background-color: #a6c88cb4;
+    background-color: #a6c88cb4 !important;
     box-shadow: 2vh 2vh 2vh rgba(180, 175, 175, 0.918);
     transform: scale(1.2);
     
@@ -277,17 +343,20 @@ header img{
 
 }
 
-.galeriaTexto h3{
+.galeriaTexto h4{
     width: 600px;
     font-size: 50px;
     font-weight: bolder;
+    color: black;
     border-bottom: 3px solid black;
-   
+    text-decoration: none !important;
 }
 
-.galeriaTexto h3 span{
+.galeriaTexto h4 span{
     font-weight: 100;
     font-size: 8vh;
+    color: black;
+    text-decoration: none !important;
 }
 
 #mainGaleria{
@@ -317,7 +386,9 @@ header img{
     margin: 10px;   
 
 }
-
+.f-redes {
+    display: flex;
+}
 
 
 .lista_1 li{
@@ -423,7 +494,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 13vh;
+    margin-top: 40px;
 }
 
 #sectionUs img{
@@ -596,39 +667,7 @@ footer{
 
 
 
-/* CONTACTO */
 
-.contacto{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 13vh;
-    
-
-}
-
-.contacto_div{
-    width: 40%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px rgb(82, 80, 80);
-    
-}
-
-.contacto_div form{
-    
-    justify-content: center;
-}
-
-label, input{
-    margin:1vh ;
-}
 
 /* INDEX TALLERES */
 
@@ -691,6 +730,11 @@ label, input{
     
 }
 
+.divTalleres p:hover{
+    height: 80vh 
+    
+}
+
 .divTango{
     background-image: url(pinterest/pinturatango.jpg);
 
@@ -714,21 +758,46 @@ label, input{
 }
 
 /* CONTACTO */
+
+
+/* CONTACTO */
+
 .contacto{
-    margin-top: 13vh;
+    width: 100%;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 13vh;
+    
+
 }
 
 .contacto_div{
+    width: 40%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(82, 80, 80);
     background-color: #f4f5f7;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(184, 181, 181);
-    height: 600px;
     
 }
+
+.contacto_div form{
+    
+    justify-content: center;
+}
+
+label, input{
+    margin:2px ;
+    
+}
+
 
 .contacto_div h3{
     margin: 20px;
@@ -738,9 +807,14 @@ label, input{
 .botonConsulta{
     padding: 5px;
     margin: 10px;
-    
+    background-color: rgb(214, 209, 209);
+    border-radius: 5px;  
 }
 
+.botonConsulta:hover{
+    background-color:#8fac7a;
+    color: black;
+}
 
 /* MOBILE FIRST */
 /* INDEX */
@@ -786,4 +860,51 @@ label, input{
         font-size: 16px;
         width: 70%;
     }
+
+
+    .contacto_div{
+        width: 100%;
+        height: 600px;
+        display: flex;
+    }
+}
+
+
+
+
+
+/* SECCION NOTICIAS */
+
+@media (min-width:481px) and (max-width:1023px){
+    #noticias{
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-areas: "titulo"
+        "festejo"
+        "teatro"
+        "radio"
+        "robles";
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+    }
+
+    .divFestejo{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .noticiaDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-nosotros{
+        height: auto;
+    }
+
+
 }
