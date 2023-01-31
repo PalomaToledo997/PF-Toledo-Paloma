@@ -127,6 +127,7 @@ header ul li{
     animation-delay: 0s; 
     transition: transform 1s;
     border-radius: 100%;
+    z-index: 3;
 }
 
 #icono_wsp:hover{
