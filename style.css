@@ -1,911 +1,388 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Oswald&family=Raleway:wght@300;600&display=swap');
-
-/* Playfair Display */
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
-
-/* Cormorant SC */
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter+Tight:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;600&family=Ranchers&family=Shrikhand&family=Sue+Ellen+Francisco&display=swap');
-
-/* Encode Sans */
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    font-size: 16px;
-    line-height: 2.0;
-    font-family: 'Encode Sans', sans-serif;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Encode Sans', sans-serif;
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Encode Sans", sans-serif;
+  box-sizing: border-box;
 }
 
-/* HEADER */
-
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 110px;
-    background-color: #a6c88c;
-    position: fixed;
-    top: 0px;
-    z-index: 2;
-    
-    
+body {
+  font-family: "Encode Sans", sans-serif;
 }
 
-.logo {
-    width: 100px;
-    height: 110pxvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #a6c88c;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+}
+header .logo {
+  width: 100px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  display: inline;
+  text-decoration: none;
+  margin: 5vh;
+  font-size: 20px;
+}
+header ul li .dropdown-menu a {
+  text-align: center;
+}
+header menu {
+  display: flex;
+  align-items: center;
+}
+header menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 550;
+}
+header .navbar {
+  background-color: rgba(166, 200, 140, 0.6980392157);
+  height: 100px;
+}
+header .navbar-toggler {
+  background-color: #a6c88c;
+}
+header .nav-item {
+  text-align: center;
+}
+header .logo-nav {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border-radius: 2px solid black;
+  margin-left: 10px;
 }
 
-
-header ul li{
-    display: inline;
-    text-decoration: none;
-    margin: 5vh;
-    font-size: 20px;
-
-     
+.nav-item a:hover {
+  background-color: #8fac7a;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-}
-.menu a{
-
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 550;
-  
+.menu a:hover {
+  color: #fdfdfa;
+  text-decoration: underline;
+  font-weight: 600;
+  text-shadow: 1vh 1vh 5vh #37053b;
 }
 
-.navbar{
-    background-color: #a6c88cb2;
-    height: 100px;
+.carousel-inner {
+  height: 100vh;
+  margin-top: 110px;
 }
 
-.navbar-toggler{
-    background-color: #8fac7a;
+.main-nosotros {
+  width: 100%;
+  height: 400px;
+  background-color: #e1ce8a;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.nav-item{
-    text-align: center;
+.main-nosotros p {
+  text-align: justify;
+  margin-top: 20px;
 }
-
-.nav-item:hover{
-    background-color:#8fac7a;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.menu a:hover{
-    color:#fdfdfa;
-    text-decoration:underline;
-    font-weight: 600;
-    text-shadow: 1vh 1vh 5vh #37053b;
-}
-
-.logo-nav{
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    border-radius: 2px solid black;
-    margin-left: 10px;
-}
-
-/* CARRUSEL */
-
-.carousel-inner{
-    height: 100vh;
-    margin-top: 110px;
-}
-
-
-
-
-/* ICONO WSP */
-
-#icono_wsp{
-    position: fixed;
-    right: 30px;
-    top: 100px;
-    animation-name: icono_wsp;
-    animation-iteration-count:initial;
-    animation-timing-function: ease-out;
-    animation-duration: 5s;
-    animation-delay: 0s; 
-    transition: transform 1s;
-    border-radius: 100%;
-    z-index: 3;
-}
-
-#icono_wsp:hover{
-    transform: scale(1.2);
-    
-
-}
-
-
-
-@keyframes icono_wsp {
-    0% { 
-        transform: translatey(-200px);
-        opacity: 0%;
-    }
-
-    40% {
-        transform: translatey(0px);
-        opacity: 100%;
-
-    }
-
-    45%{
-        transform: translateY(40px);
-    }
-
-    60%{
-        transform: translateY(0px);
-    }
-
-    90%{ transform: scale(1.5);
-
-    }
-
-    100%{
-        transform: scale(1,1);
-    }
-}
-
-
-/* BTS */
-
-.main-nosotros{
-    width: 100%;
-    height: 400px;
-    background-color:#e1ce8a;
-    text-align: justify;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-/* footer con bts */
-
-.f-enlaces li {
-    list-style-type: none;
-}
- .f-enlaces a{
-    text-decoration: none;
-    color: black;
- }
-
- .f-enlaces a:hover{
-    color: cadetblue;
-    text-shadow: 2px 2px 10px #8fac7a;
- }
-
- .f-info li{
-    list-style-type: none;
- }
-
- .f-info a{
-    color: black;
-    text-decoration: none;
- }
-
- .f-info a:hover{
-    color: cadetblue;
-    text-shadow: 2px 2px 10px #8fac7a;
- }
-
-
-/* US */
-
-.us{
-    width: 100%;
-    height: 75vh;
-    background-color:#e1ce8a;
-    text-align: justify;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-.us p{
-    width: 50%;
-    text-align: justify;
-    margin-top: 20px;
-    
-
-}
-
-.us a{
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    border: 2px solid black;
-    background-color: #fdfdfa;
-    text-decoration: none;
-    width: 100px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.us a:hover {
-    background-color: #37053b;
-    color:#fdfdfa;
-    border: 2px solid #fdfdfa;
-
-}
-
-/* SECTION TALLERES */
 
 .talleres {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.talleres .card {
+  width: 45vh;
+  height: 60vh;
+  border-radius: 20%;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 1.5vh 1.5vh 1.5vh rgba(204, 201, 201, 0.671);
+  transition: transform 2s;
+}
+.talleres .card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 70%;
 }
 
-.talleres .card{
-    width: 45vh;
-    height: 55vh;
-    border-radius: 20%;
-    margin:30px;
-    text-align: center;
-    box-shadow: 1.5vh 1.5vh 1.5vh rgba(204, 201, 201, 0.671);
-    transition: transform 2s;
-    
-
-    
-    
-    
+.card:hover {
+  background-color: rgba(166, 200, 140, 0.7058823529) !important;
+  box-shadow: 2vh 2vh 2vh rgba(180, 175, 175, 0.918);
+  transform: scale(1.2);
 }
 
-.card img{
-    width: 220px;
-    height: 220px;
-    border-radius: 70%;
+#noticias {
+  display: grid;
+  width: 100%;
+  height: 140vh;
+  grid-template-areas: "titulo titulo" "festejo teatro" "festejo radio" "festejo robles";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 1fr 1fr 1fr;
 }
-
-.card:hover{
-    background-color: #a6c88cb4 !important;
-    box-shadow: 2vh 2vh 2vh rgba(180, 175, 175, 0.918);
-    transform: scale(1.2);
-    
-    
-    
+#noticias .tituloNoticias {
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/* GALERIA */
-
-
-#galeria{
-    width: 100%;
-    height: 130vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-bottom: 30px;
-    
-
+#noticias .tituloNoticias h3 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  width: 200px;
+  text-transform: capitalize;
 }
-
-.fotoGaleria{
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    align-self: center;
-    
+#noticias .parrafoNoticia {
+  width: 80%;
+  text-align: justify;
+  line-height: 1.5;
 }
-
-.fotoGaleria img{
-    width: 250px;
-    height: 250px;
-    box-shadow: 5px 5px 10px black;
-    transition: transform 1s;
+#noticias .divFestejo {
+  grid-area: festejo;
+  display: flex;
+  flex-direction: column;
 }
-
-.fotoGaleria img:hover{
-    transform: scale(1.5);
-    filter: grayscale();
+#noticias .divFestejo .videoFestejo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.galeriaTexto{
-    width: 50%;
-    padding: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    
-
+#noticias .divFestejo .textoFestejo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
-
-.galeriaTexto h4{
-    width: 600px;
-    font-size: 50px;
-    font-weight: bolder;
-    color: black;
-    border-bottom: 3px solid black;
-    text-decoration: none !important;
+#noticias .noticiaDiv {
+  display: flex;
+  border-bottom: 1.5px solid rgb(212, 207, 207);
 }
-
-.galeriaTexto h4 span{
-    font-weight: 100;
-    font-size: 8vh;
-    color: black;
-    text-decoration: none !important;
+#noticias .noticiaTeatro {
+  grid-area: teatro;
+  display: flex;
 }
-
-#mainGaleria{
-    margin-top: 13vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#noticias .noticiaTeatro .fotoTeatro {
+  width: 50%;
 }
-
-
-
-
-/* FOOTER */
+#noticias .noticiaTeatro .fotoTeatro img {
+  width: 340px;
+  height: 210px;
+}
+#noticias .noticiaTeatro .teatroTexto {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#noticias .noticiaRadio {
+  grid-area: radio;
+  display: flex;
+}
+#noticias .noticiaRadio .audioRadio {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#noticias .noticiaRadio .audioRadio audio {
+  box-shadow: 3px 3px 10px black;
+  border-radius: 30px;
+  margin: 10px;
+}
+#noticias .noticiaRadio .radioTexto {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#noticias .noticiaRobles {
+  grid-area: robles;
+  display: flex;
+}
+#noticias .noticiaRobles .fotoRobles {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#noticias .noticiaRobles .fotoRobles .fotoRobles img {
+  width: 340px;
+  height: 210px;
+}
+#noticias .noticiaRobles .textoRobles {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .divDivisor {
-    background-image: url(img/paleta-nuvemshop-37ab98.png);
-    width: 100%;
-    height: 2vh;
-    background-position: cover;
-    margin-top: 50px;
+  background-image: url(img/paleta-nuvemshop-37ab98.png);
+  width: 100%;
+  height: 2vh;
+  background-position: cover;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
-.logosFooter img{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    margin: 10px;   
-
+footer .f-enlaces li {
+  list-style-type: none;
 }
-.f-redes {
-    display: flex;
+footer .f-enlaces li a {
+  text-decoration: none;
+  color: black;
 }
-
-
-.lista_1 li{
-    list-style-type: none;
+footer .f-enlaces li a a:hover {
+  color: cadetblue;
+  text-shadow: 2px 2px 10px #8fac7a;
 }
-
-.lista_2 li{
-    list-style-type: none;
-    text-decoration: none;
+footer .f-info li {
+  list-style-type: none;
 }
-
-footer{
-
-    width: 100%;
-    height: auto;
-
-    
-    
+footer .f-info li a {
+  color: black;
+  text-decoration: none;
 }
-
-.footerListas{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 20vh;
-
+footer .f-redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .f-redes img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin: 10px;
 }
 
-.footerListas a{
-    text-decoration: none;
-    color: black;
+footer {
+  width: 100%;
+  height: auto;
+}
+footer .footerListas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+}
+footer .footerListas a {
+  text-decoration: none;
+  color: black;
+}
+footer .footerListas .lista_1 li {
+  list-style-type: none;
+}
+footer .footerListas .lista_2 li {
+  list-style-type: none;
+  text-decoration: none;
+}
+footer .logo_muni img {
+  border-radius: 5%;
+  transition: transform 1s;
+}
+footer .logosFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+}
+footer .logosFooter img {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin: 10px;
 }
 
-.footerListas a:hover{
-    text-shadow: 0px 0px 10px black;
+.logo_muni img:hover {
+  transform: scale(1.1, 1.1);
 }
 
-
-.logosFooter{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 10vh;
+.footerListas a:hover {
+  text-shadow: 0px 0px 10px black;
 }
 
-.logo_muni img{
-    border-radius: 5%;
-    transition: transform 1s;
+.f-info a:hover {
+  color: cadetblue;
+  text-shadow: 2px 2px 10px #8fac7a;
 }
 
-.logo_muni img:hover{
-    transform: scale(1.1,1.1);
-
+.f-enlaces a:hover {
+  color: cadetblue;
+  text-shadow: 2px 2px 10px #8fac7a;
 }
 
-
-
-/* US */
-
-.usIndex{
-    background-image: url(img/RadioTeatro_foto1.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-
+.main-nosotros {
+  width: 100%;
+  height: 500px;
+  background-color: #e1ce8a;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* NOSOTROS */
-
-.dondeHabita {
-    width: 70%;
-    height: 250px;
-    background-color:rgba(250, 235, 215, 0.548);
-    text-align: center;
-    border-radius: 5px;
-    border: 2px solid wheat;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 2;
+  font-family: "Encode Sans", sans-serif;
+  box-sizing: border-box;
 }
 
-.dondeHabita h3{
-    font-size: 60px!important;
-    color:#fdfdfa;
-    font-family:'raleway', sans-serif;
-    text-shadow: 5px 5px 2px black;
-
+#sectionUs .usIndex {
+  background-image: url(img/RadioTeatro_foto1.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+#sectionUs .usIndex .dondeHabita {
+  width: 70%;
+  height: 250px;
+  background-color: rgba(250, 235, 215, 0.548);
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid wheat;
+}
+#sectionUs .usIndex .dondeHabita h3 {
+  font-size: 60px !important;
+  color: #fdfdfa;
+  font-family: "raleway", sans-serif;
+  text-shadow: 5px 5px 2px black;
 }
 
-.parrafoUs{
-    width: 60%;
-    height: auto;
-    justify-content: center;
-    margin: 20px;
-}
-
-#sectionUs{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-}
-
-#sectionUs img{
-    width: 650px;
-    height: 400px;
-    margin: 20px;
-    
-}
-
-#sectionUs h3{
-    font-size: 30px;
-    margin: 20px;
-}
-
-/* SECCION NOTICIAS */
-
-#noticias{
-    display: grid;
-    width: 100%;
-    height: 140vh;
-    
-    grid-template-areas: "titulo titulo"
-    "festejo teatro"
-    "festejo radio"
-    "festejo robles";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 1fr 1fr 1fr;
-
-}
-
-.tituloNoticias{
-    grid-area: titulo;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.tituloNoticias h3{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 50px;
-    width: 200px;
-    text-transform: capitalize;
-
-}
-
-.divFestejo{
-    grid-area: festejo;
-    display: flex;
-    flex-direction: column;
-}
-
-.videoFestejo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.textoFestejo{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-   
-}
-
-
-
-.noticiaTeatro{
-    grid-area: teatro;
-    display: flex;
-
-}
-
-.fotoTeatro{
-
-    width: 50%;
-
-}
-
-.fotoTeatro img{
-    width: 340px;
-    height: 210px;
-}
-
-
-.teatroTexto{
-    width: 50%;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.parrafoNoticia{
-    width: 80%;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-
-
-
-
-.noticiaRadio{
-    grid-area: radio;
-    display: flex;
-}
-
-.audioRadio{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.audioRadio audio{
-
-    box-shadow: 3px 3px 10px black;
-    border-radius: 30px;
-    margin: 10px;
-}
-
-.radioTexto{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.noticiaRobles{
-    grid-area: robles;
-    display: flex;
-    
-}
-
-.fotoRobles{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.fotoRobles img{
-    width: 340px;
-    height: 210px;
-}
-
-.textoRobles{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.noticiaDiv{
-    display: flex;
-    border-bottom: 1.5px solid rgb(212, 207, 207);
-}
-
-
-
-
-
-/* INDEX TALLERES */
-
-#sectionTalleres{
-    margin-top: 13vh;
-}
-
-.talleresBanner{
-    width: 100%;
-    height: 500px;
-    background-image: url(pinterest/floresblancasbanner.jpg);
-    background-position: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.divTalleresFrase{
-    width: 60%;
-    height: 60%;
-    background-color:#fdfdfac0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.divTalleresFrase h2{
-    font-size: 30px;
-    font-family: 'Cormorant SC',serif;
-    text-transform: capitalize;
-    width: 70%;
-    text-align: center;
-}
-
-.contenedorTalleres{
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.divTalleres{
-    width: 50vh;
-    height: 80vh;
-    background-position: cover;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    border: 2px solid #ddd3ad;
-}
-
-.divTalleres p{
-    background-color:#fdfdfac5;
-    
-}
-
-.divTalleres p:hover{
-    height: 80vh 
-    
-}
-
-.divTango{
-    background-image: url(pinterest/pinturatango.jpg);
-
-}
-
-.divRadio{
-    background-image: url(pinterest/radiopintura.jpg);
-    background-position: center;
-}
-
-.divRadioteatro{
-    background-image: url(img/radioteatro.jpg);
-
-}
-
-.divMusica{
-    background-image: url(pinterest/pianopintura.jpg);
-}
-.divPlastica{
-    background-image: url(pinterest/plastica1.jpg);
-}
-
-/* CONTACTO */
-
-
-/* CONTACTO */
-
-.contacto{
-    width: 100%;
-    height: 110vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 13vh;
-    
-
-}
-
-.contacto_div{
-    width: 40%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px rgb(82, 80, 80);
-    background-color: #f4f5f7;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgb(184, 181, 181);
-    
-}
-
-.contacto_div form{
-    
-    justify-content: center;
-}
-
-label, input{
-    margin:2px ;
-    
-}
-
-
-.contacto_div h3{
-    margin: 20px;
-    font-size: 25px;
-} 
-
-.botonConsulta{
-    padding: 5px;
-    margin: 10px;
-    background-color: rgb(214, 209, 209);
-    border-radius: 5px;  
-}
-
-.botonConsulta:hover{
-    background-color:#8fac7a;
-    color: black;
-}
-
-/* MOBILE FIRST */
-/* INDEX */
-@media screen and (max-width:480px) {
-    .talleres{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    nav{
-        width: auto;
-    }
-
-    .menu{
-        display: inline;
-        align-items: left;
-        
-    }
-
-    .menu a{
-        font-size: 14px;
-        
-    }
-
-    .menu li{
-        margin: 5px;   
-    }
-    .menu ul{
-        width: auto;
-    }
-    
-    .logo img{
-        height: 80px;
-        width: 80px;
-    }
-
-    .us{
-        height: 800px;
-    }
-
-    .us p{
-        font-size: 16px;
-        width: 70%;
-    }
-
-
-    .contacto_div{
-        width: 100%;
-        height: 600px;
-        display: flex;
-    }
-}
-
-
-
-
-
-/* SECCION NOTICIAS */
-
-@media (min-width:481px) and (max-width:1023px){
-    #noticias{
-        display: grid;
-        width: 100%;
-        height: auto;
-        grid-template-areas: "titulo"
-        "festejo"
-        "teatro"
-        "radio"
-        "robles";
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr 1fr 1fr;
-    }
-
-    .divFestejo{
-        display: flex;
-        flex-direction: column;
-        height: 600px;
-    }
-
-    .noticiaDiv{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-nosotros{
-        height: auto;
-    }
-
-
-}
+/*# sourceMappingURL=style.css.map */

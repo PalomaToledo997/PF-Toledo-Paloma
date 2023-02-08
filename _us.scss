@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    font-family: $fontfamily;
+    box-sizing: border-box;
+}
+
+//Nosotros index//
+
+
+#sectionUs{
+    .usIndex{
+        background-image: url(img/RadioTeatro_foto1.jpg);
+        @include size (100%, 100vh);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+
+        .dondeHabita {
+            width: 70%;
+            height: 250px;
+            background-color:rgba(250, 235, 215, 0.548);
+            text-align: center;
+            border-radius: 5px;
+            border: 2px solid wheat;
+
+                h3{
+                    font-size: $large!important;
+                    color:#fdfdfa;
+                    font-family:'raleway', sans-serif;
+                    text-shadow: 5px 5px 2px black;
+                }    
+        }
+    }    
+}
+
+
+
+        

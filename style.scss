@@ -1,0 +1,450 @@
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap');
+
+//variables fonts
+$fontfamily: 'Encode Sans', sans-serif;
+$xs: 16px;
+$small: 20px;
+$med: 40px;
+$large:60px;
+$xl: 80px;
+
+//Altura
+$margin-header:110px;
+
+
+//colores
+$green: #a6c88c;
+$violeta: #37053b;
+$darker-green: #8fac7a;
+
+//mixin
+@mixin size ($ancho, $altura){
+    width:$ancho;
+    height:$altura;
+}
+
+//reseteo//
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    font-family: $fontfamily;
+    box-sizing: border-box;
+}
+body{
+    font-family: $fontfamily;
+}
+
+
+//Header 
+header{
+    @include size(100%,110px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $green;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+        .logo{
+            @include size(100px,110px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li{
+            display: inline;
+            text-decoration: none;
+            margin: 5vh;
+            font-size: $small;
+
+            .dropdown-menu a{
+                text-align: center;
+            }
+
+        }
+
+        menu{
+            display: flex;
+            align-items: center;
+
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: $small;
+                font-weight: 550;
+            }
+        }
+
+        .navbar{
+            background-color: #a6c88cb2;
+            height: 100px;
+        }
+        .navbar-toggler{
+            background-color: $green;
+        }
+        
+        .nav-item{
+            text-align: center;
+        }
+        
+        .logo-nav{
+            @include size(90px,90px);
+            border-radius: 100%;
+            border-radius: 2px solid black;
+            margin-left: 10px;
+        }
+        
+        
+}
+
+.nav-item a:hover{
+    background-color:$darker-green;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.menu a:hover{
+    color:#fdfdfa;
+    text-decoration:underline;
+    font-weight: 600;
+    text-shadow: 1vh 1vh 5vh $violeta;
+}
+
+//carrousel
+
+.carousel-inner{
+    height: 100vh;
+    margin-top: $margin-header;
+}
+
+//nosotros//
+
+.main-nosotros{
+    width: 100%;
+    height: 400px;
+    background-color:#e1ce8a;
+    text-align: justify;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+        
+    p{
+        text-align: justify;
+        margin-top: 20px;
+    }
+
+}
+
+//Cards talleres//
+.talleres {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+    .card{
+        @include size(45vh,60vh);
+        border-radius: 20%;
+        margin:30px;
+        text-align: center;
+        box-shadow: 1.5vh 1.5vh 1.5vh rgba(204, 201, 201, 0.671);
+        transition: transform 2s;
+
+        img{
+            @include size(220px,220px);
+            border-radius: 70%;
+        }
+}
+
+}
+.card:hover{
+    background-color: #a6c88cb4 !important;
+    box-shadow: 2vh 2vh 2vh rgba(180, 175, 175, 0.918);
+    transform: scale(1.2);
+}
+
+//noticias//
+#noticias{
+    display: grid;
+    @include size(100%,140vh);
+    
+    grid-template-areas: "titulo titulo"
+    "festejo teatro"
+    "festejo radio"
+    "festejo robles";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr;
+
+    .tituloNoticias{
+        grid-area: titulo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3{
+            text-align: center;
+            font-size: $med;
+            margin-bottom: 50px;
+            width: 200px;
+            text-transform: capitalize;
+        }
+    }    
+
+    .parrafoNoticia{
+        width: 80%;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    
+
+    .divFestejo{
+        grid-area: festejo;
+        display: flex;
+        flex-direction: column;
+        .videoFestejo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .textoFestejo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+    }
+
+    .noticiaDiv{
+        display: flex;
+        border-bottom: 1.5px solid rgb(212, 207, 207);
+    }
+    
+
+    .noticiaTeatro{
+	    grid-area: teatro;
+	    display: flex;
+        .fotoTeatro{
+            width: 50%;
+            img{
+                width: 340px;
+                height: 210px;
+            }
+        }
+        .teatroTexto{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }            
+        
+    .noticiaRadio{
+        grid-area: radio;
+        display: flex;
+        .audioRadio{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                audio{
+                    box-shadow: 3px 3px 10px black;
+                    border-radius: 30px;
+                    margin: 10px;
+                }
+        }        
+    
+        .radioTexto{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }    
+
+    .noticiaRobles{
+        grid-area: robles;
+        display: flex;
+            .fotoRobles{
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .fotoRobles img{
+                    @include size(340px,210px);
+                }
+            } 
+            .textoRobles{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }         
+    }
+}
+
+//division de footer//
+.divDivisor {
+    background-image: url(img/paleta-nuvemshop-37ab98.png);
+    width: 100%;
+    height: 2vh;
+    background-position: cover;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+//footer con bs//
+
+footer{
+    .f-enlaces li {
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            color: black;
+            a:hover{
+                color: cadetblue;
+                text-shadow: 2px 2px 10px #8fac7a;
+            }
+        }
+    }    
+    
+    .f-info li{
+        list-style-type: none;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    .f-redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        
+        img{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            margin: 10px;
+        }
+    }
+    
+}    
+    //footer//
+    
+footer{
+    @include size(100%,auto);
+    .footerListas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 20vh;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            .lista_1 li{
+                list-style-type: none;
+            }
+
+            .lista_2 li{
+                list-style-type: none;
+                text-decoration: none;
+            }                        
+    }
+    
+    .logo_muni img{
+        border-radius: 5%;
+        transition: transform 1s;
+        
+    }
+    .logosFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 10vh;
+        
+        img{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            margin: 10px;
+        }
+                        
+    }
+}    
+
+.logo_muni img:hover{
+    transform: scale(1.1,1.1);
+}
+
+.footerListas a:hover{
+    text-shadow: 0px 0px 10px black;
+}
+
+.f-info a:hover{
+    color: cadetblue;
+    text-shadow: 2px 2px 10px #8fac7a;
+}
+
+.f-enlaces a:hover{
+    color: cadetblue;
+    text-shadow: 2px 2px 10px #8fac7a;
+}
+
+//fin footer//
+
+//nosotros//
+.main-nosotros{
+    width: 100%;
+    height: 500px;
+    background-color:#e1ce8a;
+    text-align: justify;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+@import "_us";
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
