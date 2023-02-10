@@ -1,8 +1,9 @@
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400&family=Raleway:wght@400;600&display=swap');
 
 //variables fonts
-$fontfamily: 'Encode Sans', sans-serif;
+$fontfamily:'Encode Sans', sans-serif;
 $xs: 16px;
 $small: 20px;
 $med: 40px;
@@ -67,7 +68,7 @@ header{
 
         }
 
-        menu{
+        .menu{
             display: flex;
             align-items: center;
 
@@ -75,7 +76,8 @@ header{
                 text-decoration: none;
                 color: black;
                 font-size: $small;
-                font-weight: 550;
+                font-weight: 400;
+                font-family: 'Encode Sans', sans-serif !important;
             }
         }
 
@@ -113,6 +115,12 @@ header{
     font-weight: 600;
     text-shadow: 1vh 1vh 5vh $violeta;
 }
+
+//header sin bs//
+
+
+
+
 
 //carrousel
 
@@ -426,8 +434,9 @@ footer{
 }
 
 @import "_us";
-
-
+@import "_galeria";
+@import "_contacto";
+@import "_prueba";
 
 
 

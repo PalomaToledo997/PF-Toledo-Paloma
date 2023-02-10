@@ -1,0 +1,70 @@
+//reseteo//
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    font-family: $fontfamily;
+    box-sizing: border-box;
+}
+
+//galeria  index//
+
+#mainGaleria{
+    margin-top: $margin-header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .galeriaTexto{
+        width: 50%;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        
+        h4{
+            width: 600px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: black;
+            border-bottom: 3px solid black;
+            text-decoration: none;
+            
+            span{
+                font-weight: 100;
+                font-size: 8vh;
+                color: black;
+                text-decoration: none;                
+            }
+        }
+    }
+
+    #galeria{
+        @include size (100%, 130vh);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 30px;
+        
+        .fotoGaleria{
+            @include size (300px, 300px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+        }
+    } 
+}
+
+.fotoGaleria img{
+    @include size (250px, 250px);
+    box-shadow: 5px 5px 10px black;
+    transition: transform 1s;
+}
+.fotoGaleria img:hover{
+    transform: scale(1.5);
+    filter:grayscale(1.5);           
+}

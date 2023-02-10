@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    box-sizing: border-box;
+}
+
+.contacto{
+    @include size (100%,110vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13vh;
+    .contacto_div{
+        @include size (40%, 600px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px rgb(82, 80, 80);
+        background-color: #f4f5f7;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgb(184, 181, 181);
+        
+            h3{
+                margin: 20px;
+                font-size: 25px;
+            } 
+        
+        
+            form{
+                justify-content: center;
+
+                    label, input{
+                        margin:2px ;
+                    }        
+            }
+    }
+}
+
+.botonConsulta{
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(214, 209, 209);
+    border-radius: 5px;  
+}
+.botonConsulta:hover{
+    background-color:#8fac7a;
+    color: black;
+}
+
+
+
+
+
+

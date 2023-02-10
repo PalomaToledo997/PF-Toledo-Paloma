@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    box-sizing: border-box;
+}
+
+//bck talleres//
+$bg-tango:#e1ce8a;
+$bg-radioteatro:#a6c88c;
+$bg-musica:#80bc96;
+
+
+
+main{
+    @include size (100%, auto);
+    font-family: $fontfamily;
+}
+
+
+
+@each $talleres in plastica, tango, radioteatro, musica, radio{
+    .info-#{$talleres}{
+        @include size (100%, 100vh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                @include size (400px, 400px);
+                border-radius: 100%;
+                box-shadow: 0px 0px 10px black;
+                
+
+                }            
+            }
+        div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4{
+                align-items: center;
+            }
+            p{
+                text-align: justify;
+                width: 70%;
+                border-bottom: 1px solid black;
+                padding: 15px;
+                
+            }
+        }
+        
+    }
+}
