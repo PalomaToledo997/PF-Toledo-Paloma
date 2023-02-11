@@ -1,0 +1,279 @@
+//variables fonts
+$fontfamily:'Encode Sans', sans-serif;
+$xs: 16px;
+$small: 20px;
+$med: 40px;
+$large:60px;
+$xl: 80px;
+
+//colores
+$green: #a6c88c;
+$violeta: #37053b;
+$darker-green: #8fac7a;
+$light-green:#acbe9ee5;
+
+//mixin
+@mixin size ($ancho, $altura){
+    width:$ancho;
+    height:$altura;
+}
+
+//reseteo//
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    line-height: 2.0;
+    font-family: $fontfamily;
+    box-sizing: border-box;
+}
+
+//index//
+//desktop//
+@media only screen and (min-width: 1200px){
+    .navbar{
+        width: 100%;
+    }
+    .talleres{
+        .card{
+            // @include size(55vh,60vh);      
+        }
+    }
+
+}
+
+//tablests//
+// @media only screen and (min-width: 992px){
+//     .talleres{
+//         .card{
+//             @include size(45vh,70vh);
+//         }
+
+//     }
+//     .navbar{
+//         width: 100%;
+//     }
+
+//     #noticias{
+//         @include size(100%,auto );
+//         display: grid;
+//         grid-template-areas: "titulo"
+//     "festejo"
+//     "teatro"
+//     "radio"
+//     "robles";
+//     grid-template-columns: 100%;
+//     grid-template-rows: 200px auto 300px 300px 300px;
+//     justify-content: center;
+//     align-content: center;
+
+//     // .noticiaTeatro{
+//     //     width: 100%;
+//     //     height: auto;
+//     //     display: flex;
+//     //     flex-direction: column;
+//     //     justify-content: center;
+//     //     align-items: center;
+//     // }
+//     }
+
+// }
+
+//smartphone
+
+@media only screen and (min-width:320px) and (max-width:480px){
+
+//footer de bs//
+.f-listas{
+    .f-enlaces{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .f-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .f-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
+}
+//fin footer de bs//
+
+
+//noticias index//
+#noticias{
+    
+    display: grid;
+    @include size(100%, 300vh);
+    
+    grid-template-areas: "titulo"
+    "festejo" 
+    "teatro"
+    "radio"
+    "robles";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr 1fr;
+
+    .divFestejo{
+        grid-area: festejo;
+        display: flex;
+        flex-direction: column;
+        .videoFestejo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            iframe{
+                @include size (330px, 200px)
+            }
+        }
+        .textoFestejo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+    }
+
+    .noticiaDiv{
+        display: flex;
+        border-bottom: 1.5px solid rgb(212, 207, 207);
+    }
+    
+
+    .noticiaTeatro{
+	    grid-area: teatro;
+	    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .fotoTeatro{
+            width: 50%;
+            img{
+                object-fit: contain;
+            }
+        }
+        .teatroTexto{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }            
+        
+    .noticiaRadio{
+        grid-area: radio;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .audioRadio{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+                audio{
+                    box-shadow: 3px 3px 10px black;
+                    border-radius: 30px;
+                    margin: 10px;
+                }
+        }        
+    
+        .radioTexto{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }    
+
+    .noticiaRobles{
+        grid-area: robles;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            .fotoRobles{
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .fotoRobles img{
+                    @include size(340px,210px);
+                    object-fit: contain;
+                }
+            } 
+            .textoRobles{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;             
+            }         
+    }
+    
+}
+//fin noticias index//
+
+//nav bar dropdown//
+#navbarSupportedContent{
+    background-color: $light-green;
+}
+
+
+}
+
+//tablet en vertical//
+@media  (min-width:768px) and (max-width:1023px){
+    #noticias{
+        .divFestejo{
+            .videoFestejo{
+                iframe{
+                    @include size (320px, 190px);
+                }
+
+            }
+        }
+    .audioRadio{
+        audio{
+
+        }
+    }
+
+    }
+    
+}
+
+//tables pequeñas//
+@media  (min-width:481px) and (max-width:767px) {
+    #noticias{
+        display: grid;
+    @include size(100%, 300vh);
+    
+    grid-template-areas: "titulo"
+    "festejo" 
+    "teatro"
+    "radio"
+    "robles";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr 1fr;
+
+    }
+}
+
+

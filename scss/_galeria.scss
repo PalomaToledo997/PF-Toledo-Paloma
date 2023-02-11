@@ -60,11 +60,15 @@
 }
 
 .fotoGaleria img{
-    @include size (250px, 250px);
+    @include size (300px, 300px);
+    object-fit: cover;
     box-shadow: 5px 5px 10px black;
-    transition: transform 1s;
+    overflow: hidden;
+    transition: all 1.5s;
+    margin: 5px;
+
 }
 .fotoGaleria img:hover{
-    transform: scale(1.5);
+    transform: scale(1.7);
     filter:grayscale(1.5);           
 }
