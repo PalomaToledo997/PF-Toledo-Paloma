@@ -281,12 +281,13 @@ header{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-                audio{
-                    @include size(250px,50px);
-                    box-shadow: 3px 3px 10px black;
-                    border-radius: 30px;
-                    margin: 10px;
+                
+                img{
+                    width: 340px;
+                    height: 210px;
+                    object-fit: cover
                 }
+                
         }        
     
         .radioTexto{

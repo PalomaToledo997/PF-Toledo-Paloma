@@ -218,12 +218,10 @@ header .logo-nav {
   justify-content: center;
   align-items: center;
 }
-#noticias .noticiaRadio .audioRadio audio {
-  width: 250px;
-  height: 50px;
-  box-shadow: 3px 3px 10px black;
-  border-radius: 30px;
-  margin: 10px;
+#noticias .noticiaRadio .audioRadio img {
+  width: 340px;
+  height: 210px;
+  object-fit: cover;
 }
 #noticias .noticiaRadio .radioTexto {
   width: 50%;
@@ -837,10 +835,6 @@ main {
     align-items: center;
     margin-bottom: 20px;
   }
-  #noticias .noticiaRadio .audioRadio audio {
-    width: 200px;
-    height: 50px;
-  }
   #noticias .noticiaRadio .radioTexto {
     width: 50%;
     display: flex;
@@ -911,6 +905,39 @@ main {
   .contacto .contacto_div label, .contacto .contacto_div input {
     margin: 1px;
     display: block;
+  }
+  #sectionUs .usIndex {
+    height: 45vh;
+  }
+  #sectionUs .usIndex .dondeHabita {
+    width: 70%;
+    height: auto;
+  }
+  #sectionUs .parrafoUs {
+    width: 85%;
+  }
+  #sectionUs img {
+    width: 350px;
+    height: 200px;
+  }
+  #mainGaleria .galeriaTexto h4 span {
+    font-size: 6vh;
+  }
+  #mainGaleria #galeria {
+    width: 100%;
+    height: 300vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainGaleria #galeria .fotoGaleria {
+    width: 250px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1022,6 +1049,33 @@ main {
   }
   .contacto .contacto_div label, .contacto .contacto_div input {
     margin: 1px;
+  }
+  #sectionUs .usIndex {
+    height: 60vh;
+  }
+  #sectionUs .usIndex .dondeHabita {
+    width: 70%;
+    height: auto;
+  }
+  #sectionUs img {
+    width: 450px;
+    height: 300px;
+  }
+  .f-listas .f-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .f-listas .f-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .f-listas .f-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
