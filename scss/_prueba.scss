@@ -1,3 +1,31 @@
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400&family=Raleway:wght@400;600&display=swap');
+
+//variables fonts
+$fontfamily:'Encode Sans', sans-serif;
+$xs: 16px;
+$small: 20px;
+$med: 40px;
+$large:60px;
+$xl: 80px;
+
+//Altura
+$margin-header:110px;
+
+
+//colores
+$green: #a6c88c;
+$violeta: #37053b;
+$darker-green: #8fac7a;
+$light-green:#acbe9ee5;
+
+//mixin
+@mixin size ($ancho, $altura){
+    width:$ancho;
+    height:$altura;
+}
+
 *{
     margin:0;
     padding:0;
@@ -22,7 +50,8 @@ main{
 
 @each $talleres in plastica, tango, radioteatro, musica, radio{
     .info-#{$talleres}{
-        @include size (100%, 100vh);
+        @include size (100%, 75vh);
+        margin-top: $margin-header;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,6 +64,7 @@ main{
             img{
                 @include size (400px, 400px);
                 border-radius: 100%;
+                box-shadow: 0px 0px 10px black;
             }        
         }
         div{
@@ -53,4 +83,9 @@ main{
         }
 
 }
+}
+
+.info-taller:hover{
+    background-color: rgba(219, 217, 217, 0.568);
+    @include size (100%, 75vh);
 }

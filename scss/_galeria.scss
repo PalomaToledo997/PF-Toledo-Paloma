@@ -46,16 +46,14 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         margin-bottom: 30px;
+        align-content: center;
+        justify-content: center;
         
         .fotoGaleria{
             @include size (300px, 300px);
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             justify-self: center;
-            align-self: center;
-        }
     } 
 }
 
@@ -69,6 +67,7 @@
 
 }
 .fotoGaleria img:hover{
-    transform: scale(1.7);
+    transform: scale(1.6);
     filter:grayscale(1.5);           
+}
 }

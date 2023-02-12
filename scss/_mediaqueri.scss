@@ -6,6 +6,9 @@ $med: 40px;
 $large:60px;
 $xl: 80px;
 
+//Altura
+$margin-header:110px;
+
 //colores
 $green: #a6c88c;
 $violeta: #37053b;
@@ -34,53 +37,12 @@ $light-green:#acbe9ee5;
     .navbar{
         width: 100%;
     }
-    .talleres{
-        .card{
-            // @include size(55vh,60vh);      
-        }
-    }
+
 
 }
 
-//tablests//
-// @media only screen and (min-width: 992px){
-//     .talleres{
-//         .card{
-//             @include size(45vh,70vh);
-//         }
 
-//     }
-//     .navbar{
-//         width: 100%;
-//     }
-
-//     #noticias{
-//         @include size(100%,auto );
-//         display: grid;
-//         grid-template-areas: "titulo"
-//     "festejo"
-//     "teatro"
-//     "radio"
-//     "robles";
-//     grid-template-columns: 100%;
-//     grid-template-rows: 200px auto 300px 300px 300px;
-//     justify-content: center;
-//     align-content: center;
-
-//     // .noticiaTeatro{
-//     //     width: 100%;
-//     //     height: auto;
-//     //     display: flex;
-//     //     flex-direction: column;
-//     //     justify-content: center;
-//     //     align-items: center;
-//     // }
-//     }
-
-// }
-
-//smartphone
-
+//small smartphone//
 @media only screen and (min-width:320px) and (max-width:480px){
 
 //footer de bs//
@@ -108,7 +70,7 @@ $light-green:#acbe9ee5;
 }
 //fin footer de bs//
 
-
+//continua (min-width:320px) and (max-width:480px)//
 //noticias index//
 #noticias{
     
@@ -185,10 +147,8 @@ $light-green:#acbe9ee5;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-                audio{
-                    box-shadow: 3px 3px 10px black;
-                    border-radius: 30px;
-                    margin: 10px;
+                audio{                    
+                    @include size(200px,50px)
                 }
         }        
     
@@ -235,8 +195,50 @@ $light-green:#acbe9ee5;
     background-color: $light-green;
 }
 
+//info talleres medida mas chica//
+#pag-talleres{
+    @include size(100%, 300vh );
+    .info-taller{
+        @include size (100%, 70vh);
+        display: flex;
+        flex-direction: column;
 
+            div{
+                img{
+                    @include size(250px,250px);
+                    margin: 10px;
+                }
+            }
+
+            div{
+                width: 80%;
+                p{
+                    width: 100%;
+                    font-size: $small;
+                }
+            }       
+    }
 }
+//contacto (min-width:320px) and (max-width:480px)//
+
+.contacto{
+    width: 100%;
+    height: 100vh;
+        .contacto_div{
+        @include size (80%, 90vh);
+        align-self: center;
+        label, input{
+            margin:1px ;
+            display: block;
+        }  
+    }
+} 
+
+    
+}
+
+
+
 
 //tablet en vertical//
 @media  (min-width:768px) and (max-width:1023px){
@@ -249,18 +251,61 @@ $light-green:#acbe9ee5;
 
             }
         }
+
     .audioRadio{
         audio{
-
+                    
+            @include size(100px,50px);        
+        }
+    }    
+    }
+//galeria (min-width:768px) and (max-width:1023px)//
+#mainGaleria{
+    height: auto;
+    
+    #galeria{
+        @include size (100%, 250vh);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        .fotoGaleria{
+            @include size (250px, 250px);
+            justify-self: center;
+            align-self: center;
+                img{
+                    @include size (300px, 300px);
+                    object-fit: cover;
+                    justify-self: center;
+                    align-self: center;
+            }
+                
+            
         }
     }
 
+    .galeriaTexto{
+        h4{
+            width: 500px;
+
+        }
     }
-    
+}
+//contacto (min-width:768px) and (max-width:1023px)//
+.contacto{
+    width: 100%;
+    height: 70vh;
+        .contacto_div{
+        @include size (500px, 600px);
+        align-self: center;
+    }
+} 
 }
 
 //tables pequeñas//
-@media  (min-width:481px) and (max-width:767px) {
+@media (min-width:481px) and (max-width:767px) {
     #noticias{
         display: grid;
     @include size(100%, 300vh);
@@ -274,6 +319,76 @@ $light-green:#acbe9ee5;
     grid-template-rows: 200px 1fr 1fr 1fr 1fr;
 
     }
+    .navbar-collapse{
+        background-color: $light-green;
+    }
+//galeria//
+
+#mainGaleria{
+    #galeria{
+        @include size (100%, 300vh);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        .fotoGaleria{
+            @include size (250px, auto);
+            justify-self: center;
+            align-self: center;
+                
+            
+        }
+    }
+    
 }
+//info talleres//
+#pag-talleres{
+    @include size(100%, 300vh );
+    .info-taller{
+        @include size (100%, 70vh);
+        display: flex;
+        flex-direction: column;
+
+            div{
+                img{
+                    @include size(250px,250px);
+                    margin: 10px;
+                }
+            }
+
+            div{
+                width: 80%;
+                p{
+                    width: 100%;
+                    font-size: 20px;
+                }
+            }       
+    }
+}
+//contacto//
+
+.contacto{
+    width: 100%;
+    height: 100vh;
+        .contacto_div{
+        @include size (80%, 60%);
+        align-self: center;
+        label, input{
+            margin:1px ;
+
+        }  
+    }
+}
+
+
+}
+
+// Large devices (desktops, 992px and up)
+
+
+
+
 
 

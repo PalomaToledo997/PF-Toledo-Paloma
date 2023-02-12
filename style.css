@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400&family=Raleway:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400&family=Raleway:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -217,8 +219,11 @@ header .logo-nav {
   align-items: center;
 }
 #noticias .noticiaRadio .audioRadio audio {
-  width: 200px;
+  width: 250px;
   height: 50px;
+  box-shadow: 3px 3px 10px black;
+  border-radius: 30px;
+  margin: 10px;
 }
 #noticias .noticiaRadio .radioTexto {
   width: 50%;
@@ -462,19 +467,17 @@ footer .logosFooter img {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   margin-bottom: 30px;
+  align-content: center;
+  justify-content: center;
 }
 #mainGaleria #galeria .fotoGaleria {
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   justify-self: center;
-  align-self: center;
 }
-
-.fotoGaleria img {
+#mainGaleria .fotoGaleria img {
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -483,9 +486,8 @@ footer .logosFooter img {
   transition: all 1.5s;
   margin: 5px;
 }
-
-.fotoGaleria img:hover {
-  transform: scale(1.7);
+#mainGaleria .fotoGaleria img:hover {
+  transform: scale(1.6);
   filter: grayscale(1.5);
 }
 
@@ -557,7 +559,8 @@ main {
 
 .info-plastica {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -572,6 +575,7 @@ main {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
 }
 .info-plastica div {
   display: flex;
@@ -589,7 +593,8 @@ main {
 
 .info-tango {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -604,6 +609,7 @@ main {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
 }
 .info-tango div {
   display: flex;
@@ -621,7 +627,8 @@ main {
 
 .info-radioteatro {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -636,6 +643,7 @@ main {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
 }
 .info-radioteatro div {
   display: flex;
@@ -653,7 +661,8 @@ main {
 
 .info-musica {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -668,6 +677,7 @@ main {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
 }
 .info-musica div {
   display: flex;
@@ -685,7 +695,8 @@ main {
 
 .info-radio {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -700,6 +711,7 @@ main {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+  box-shadow: 0px 0px 10px black;
 }
 .info-radio div {
   display: flex;
@@ -713,6 +725,12 @@ main {
   width: 70%;
   border-bottom: 1px solid black;
   padding: 15px;
+}
+
+.info-taller:hover {
+  background-color: rgba(219, 217, 217, 0.568);
+  width: 100%;
+  height: 75vh;
 }
 
 * {
@@ -820,9 +838,8 @@ main {
     margin-bottom: 20px;
   }
   #noticias .noticiaRadio .audioRadio audio {
-    box-shadow: 3px 3px 10px black;
-    border-radius: 30px;
-    margin: 10px;
+    width: 200px;
+    height: 50px;
   }
   #noticias .noticiaRadio .radioTexto {
     width: 50%;
@@ -860,11 +877,88 @@ main {
   #navbarSupportedContent {
     background-color: rgba(172, 190, 158, 0.8980392157);
   }
+  #pag-talleres {
+    width: 100%;
+    height: 300vh;
+  }
+  #pag-talleres .info-taller {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #pag-talleres .info-taller div img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+  }
+  #pag-talleres .info-taller div {
+    width: 80%;
+  }
+  #pag-talleres .info-taller div p {
+    width: 100%;
+    font-size: 20px;
+  }
+  .contacto {
+    width: 100%;
+    height: 100vh;
+  }
+  .contacto .contacto_div {
+    width: 80%;
+    height: 90vh;
+    align-self: center;
+  }
+  .contacto .contacto_div label, .contacto .contacto_div input {
+    margin: 1px;
+    display: block;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #noticias .divFestejo .videoFestejo iframe {
     width: 320px;
     height: 190px;
+  }
+  #noticias .audioRadio audio {
+    width: 100px;
+    height: 50px;
+  }
+  #mainGaleria {
+    height: auto;
+  }
+  #mainGaleria #galeria {
+    width: 100%;
+    height: 250vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainGaleria #galeria .fotoGaleria {
+    width: 250px;
+    height: 250px;
+    justify-self: center;
+    align-self: center;
+  }
+  #mainGaleria #galeria .fotoGaleria img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    justify-self: center;
+    align-self: center;
+  }
+  #mainGaleria .galeriaTexto h4 {
+    width: 500px;
+  }
+  .contacto {
+    width: 100%;
+    height: 70vh;
+  }
+  .contacto .contacto_div {
+    width: 500px;
+    height: 600px;
+    align-self: center;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -875,6 +969,59 @@ main {
     grid-template-areas: "titulo" "festejo" "teatro" "radio" "robles";
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr 1fr 1fr 1fr;
+  }
+  .navbar-collapse {
+    background-color: rgba(172, 190, 158, 0.8980392157);
+  }
+  #mainGaleria #galeria {
+    width: 100%;
+    height: 300vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainGaleria #galeria .fotoGaleria {
+    width: 250px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+  }
+  #pag-talleres {
+    width: 100%;
+    height: 300vh;
+  }
+  #pag-talleres .info-taller {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #pag-talleres .info-taller div img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+  }
+  #pag-talleres .info-taller div {
+    width: 80%;
+  }
+  #pag-talleres .info-taller div p {
+    width: 100%;
+    font-size: 20px;
+  }
+  .contacto {
+    width: 100%;
+    height: 100vh;
+  }
+  .contacto .contacto_div {
+    width: 80%;
+    height: 60%;
+    align-self: center;
+  }
+  .contacto .contacto_div label, .contacto .contacto_div input {
+    margin: 1px;
   }
 }
 
