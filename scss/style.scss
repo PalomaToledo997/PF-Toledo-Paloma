@@ -457,6 +457,71 @@ footer{
     justify-content: center;
 }
 
+//icono wsp//
+
+.icono_wsp{
+    position: fixed;
+    right: 30px;
+    top: 150px;
+    animation-name: icono_wsp;
+    animation-iteration-count:initial;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+    animation-delay: 0s; 
+    transition: transform 1s;
+    border-radius: 100%;
+    z-index: 3;
+    @include size(60px,60px);
+        img{
+            @include size(60px,60px);
+        }
+}
+
+
+.icono_wsp:hover{
+    transform: scale(1.25, 1.25);
+    box-shadow: 0px 0px 5px black;
+}
+
+//key frame//
+@keyframes icono_wsp {
+    0% { 
+        transform: translatey(-200px);
+        opacity: 0%;
+    }
+
+
+    40% {
+        transform: translatey(0px);
+        opacity: 100%;
+
+
+    }
+
+
+    45%{
+        transform: translateY(40px);
+    }
+
+
+    60%{
+        transform: translateY(0px);
+    }
+
+
+    90%{ transform: scale(1.5);
+
+
+    }
+
+
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+
+
 
 @import "_us";
 @import "_galeria";

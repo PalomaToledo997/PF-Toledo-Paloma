@@ -224,7 +224,7 @@ $light-green:#acbe9ee5;
         @include size(100%, auto );
         
         .info-taller{
-        @include size (100%, 70vh);
+        @include size (100%, 160vh);
             display: flex;
             flex-direction: column;
             margin: 20px;
