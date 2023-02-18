@@ -14,7 +14,7 @@
     justify-content: center;
     margin-top: 13vh;
     .contacto_div{
-        @include size (40%, 600px);
+        @include size (40%, 90%);
         display: flex;
         flex-direction: column;
         align-items: center;

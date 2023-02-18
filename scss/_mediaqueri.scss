@@ -25,7 +25,7 @@ $light-green:#acbe9ee5;
 *{
     margin:0;
     padding:0;
-    font-size: 16px;
+    font-size:16px;
     line-height: 2.0;
     font-family: $fontfamily;
     box-sizing: border-box;
@@ -37,8 +37,20 @@ $light-green:#acbe9ee5;
     .navbar{
         width: 100%;
     }
+}
 
+@media only screen and (min-width:576px) and (max-width:990px) {
+    #navbarSupportedContent{
+        background-color: $light-green;
+}
 
+    #carouselExampleIndicators{
+        .carousel-inner{
+            height: auto;
+        }
+        
+    }
+    
 }
 
 
@@ -69,6 +81,14 @@ $light-green:#acbe9ee5;
     }
 }
 //fin footer de bs//
+
+//carrousel//
+    #carouselExampleIndicators{
+        .carousel-inner{
+            height: auto;
+        }
+    
+    }
 
 //continua (min-width:320px) and (max-width:480px)//
 //noticias index//
@@ -189,67 +209,74 @@ $light-green:#acbe9ee5;
 //fin noticias index//
 
 //nav bar dropdown//
-#navbarSupportedContent{
-    background-color: $light-green;
-}
+    #navbarSupportedContent{
+        background-color: $light-green;
+            .nav-item{
+                margin: 2px;
+            
+        }
+    }
+
+
 
 //info talleres medida mas chica//
-#pag-talleres{
-    @include size(100%, 300vh );
-    .info-taller{
+    #pag-talleres{
+        @include size(100%, auto );
+        
+        .info-taller{
         @include size (100%, 70vh);
-        display: flex;
-        flex-direction: column;
-
-            div{
-                img{
-                    @include size(250px,250px);
-                    margin: 10px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+                div{
+                    img{
+                        @include size(200px,200px);
+                        margin: 10px;
+                    }
                 }
-            }
 
-            div{
-                width: 80%;
-                p{
-                    width: 100%;
-                    font-size: $small;
-                }
-            }       
+                div{
+                    width: 80%;
+
+                        p{
+                            width: 100%;
+                            font-size: $small;
+                        }
+                }       
+        }
     }
-}
 //contacto (min-width:320px) and (max-width:480px)//
 
-.contacto{
-    width: 100%;
-    height: 100vh;
-        .contacto_div{
-        @include size (80%, 90vh);
-        align-self: center;
-        label, input{
-            margin:1px ;
-            display: block;
-        }  
-    }
-} 
+    .contacto{
+        width: 100%;
+        height: 130vh;
+            .contacto_div{
+                @include size (80%, auto);
+                align-self: center;
+                    label, input{
+                        display: block;
+                    }  
+            }
+    } 
 
 //nosotros >480//
-#sectionUs{
-    .usIndex{
-        height: 45vh;    
+    #sectionUs{
+        .usIndex{
+            height: 70vh;  
 
-        .dondeHabita{
-            @include size(70%,auto);
+            .dondeHabita{
+                @include size(70%,auto);
 
-        }
+            }
         
+        }
+        .parrafoUs{
+            width: 85%;
+        }
+        img{
+            @include size( 350px,200px );
+        }
     }
-    .parrafoUs{
-        width: 85%;
-    }
-    img{
-        @include size( 350px,200px );
-    }
-}
 //galeria >480//
 #mainGaleria{
     .galeriaTexto{
@@ -275,8 +302,6 @@ $light-green:#acbe9ee5;
             }
     }
 }
-
-
 
 }
 
@@ -307,10 +332,10 @@ $light-green:#acbe9ee5;
     height: auto;
     
     #galeria{
-        @include size (100%, 250vh);
+        @include size (100%, 100vh);
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         margin-bottom: 20px;
         justify-content: center;
         align-items: center;
@@ -319,7 +344,7 @@ $light-green:#acbe9ee5;
             justify-self: center;
             align-self: center;
                 img{
-                    @include size (300px, 300px);
+                    @include size (250px, 250px);
                     object-fit: cover;
                     justify-self: center;
                     align-self: center;
@@ -339,16 +364,33 @@ $light-green:#acbe9ee5;
 //contacto (min-width:768px) and (max-width:1023px)//
 .contacto{
     width: 100%;
-    height: 70vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $margin-header;
         .contacto_div{
-        @include size (500px, 600px);
-        align-self: center;
-    }
+            @include size (65%, auto);
+            align-self: center;
+        }
 } 
+
+//carrousel//
+    #carouselExampleIndicators{
+        .carousel-inner{
+            height: auto;
+        }
+    
+    }
+
+//Nav Bar Collaps//    
+
 }
 
+
+
 //tables pequeñas//
-@media (min-width:481px) and (max-width:767px) {
+@media only screen and (min-width:481px) and (max-width:767px){
     #noticias{
         display: grid;
     @include size(100%, 300vh);
@@ -364,76 +406,83 @@ $light-green:#acbe9ee5;
     }
     .navbar-collapse{
         background-color: $light-green;
-    }
+        overflow: scroll;
+                .nav-item{
+                    margin: 2px;
+                }
+        }
+
 //galeria//
 
-#mainGaleria{
-    #galeria{
-        @include size (100%, 300vh);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 1fr);
-        margin-bottom: 20px;
-        justify-content: center;
-        align-items: center;
-        .fotoGaleria{
-            @include size (250px, auto);
-            justify-self: center;
-            align-self: center;
-                
-            
+    #mainGaleria{
+        #galeria{
+            @include size (100%, 150vh);
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            .fotoGaleria{
+                @include size (250px, auto);
+                justify-self: center;
+                align-self: center;
+                    img{
+                        @include size (200px, 200px);
+                    }
+            }
+        }
+    
+    }
+//info talleres//
+    #pag-talleres{
+        @include size(100%, 300vh );
+        .info-taller{
+            @include size (100%, 90vh);
+            display: flex;
+            flex-direction: ro2;
+            align-items: center;
+            justify-content: center;
+
+                div{
+                    img{
+                        @include size(200px,200px);
+                        margin: 10px;
+                    }
+                }
+
+                div{
+                    width: 80%;
+                    p{
+                        width: 100%;
+                        font-size: 20px;
+                    }
+                }       
         }
     }
-    
-}
-//info talleres//
-#pag-talleres{
-    @include size(100%, 300vh );
-    .info-taller{
-        @include size (100%, 70vh);
-        display: flex;
-        flex-direction: column;
-
-            div{
-                img{
-                    @include size(250px,250px);
-                    margin: 10px;
-                }
-            }
-
-            div{
-                width: 80%;
-                p{
-                    width: 100%;
-                    font-size: 20px;
-                }
-            }       
-    }
-}
 //contacto//
 
 .contacto{
     width: 100%;
     height: 100vh;
         .contacto_div{
-        @include size (80%, 60%);
-        align-self: center;
-        label, input{
-            margin:1px ;
+            margin-top: 50px;
+            @include size (60%, 95%);
+            align-self: center;
+            label, input{
+                margin:1px ;
 
-        }  
-    }
+            }  
+        }
 }
 
 //nosotros//
     #sectionUs{
         .usIndex{
-            height: 60vh;    
-
-            .dondeHabita{
-                @include size(70%,auto)
-            }
-            
+            height: 70vh;    
+                .dondeHabita{
+                    @include size(auto, auto);
+                }
         }
 
         img{
@@ -458,10 +507,20 @@ $light-green:#acbe9ee5;
             align-items: center;
             justify-content: center;
         }
+    }    
+//carrousel//
+    #carouselExampleIndicators{
+        .carousel-inner{
+            height: auto;
+        }
+    
     }
 
-
 }
+
+
+
+
 
 // Large devices (desktops, 992px and up)
 

@@ -55,7 +55,7 @@ header{
     top: 0px;
     z-index: 2;
         .logo{
-            @include size(100px,110px);
+            @include size(90px,100px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,6 +87,7 @@ header{
         }
 
         .navbar{
+            width: 100%;
             background-color: #a6c88cb2;
             height: 100px;
         }
@@ -99,14 +100,17 @@ header{
         }
         
         .logo-nav{
-            @include size(90px,90px);
+            @include size(85px,85px);
             border-radius: 100%;
             border-radius: 2px solid black;
             margin-left: 10px;
         }
+
+        }
         
         
-}
+        
+
 
 .nav-item a:hover{
     background-color:$darker-green;
@@ -129,8 +133,9 @@ header{
 
 //carrousel
 
-.carousel-inner{
-    height: 100vh;
+.carousel{
+    width: 100%;
+    height: auto;
     margin-top: $margin-header;
 }
 
@@ -144,11 +149,12 @@ header{
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
-        
-    p{
-        text-align: justify;
-        margin-top: 20px;
+    justify-content: center;      
+        p{
+            text-align: justify;
+            margin-top: 20px;
+            padding-left:20px;
+            padding-right:20px;  
     }
 
 }

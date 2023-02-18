@@ -27,8 +27,8 @@ header {
   z-index: 2;
 }
 header .logo {
-  width: 100px;
-  height: 110px;
+  width: 90px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,7 @@ header .menu a {
   font-family: "Encode Sans", sans-serif !important;
 }
 header .navbar {
+  width: 100%;
   background-color: rgba(166, 200, 140, 0.6980392157);
   height: 100px;
 }
@@ -64,8 +65,8 @@ header .nav-item {
   text-align: center;
 }
 header .logo-nav {
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   border-radius: 100%;
   border-radius: 2px solid black;
   margin-left: 10px;
@@ -84,8 +85,9 @@ header .logo-nav {
   text-shadow: 1vh 1vh 5vh #37053b;
 }
 
-.carousel-inner {
-  height: 100vh;
+.carousel {
+  width: 100%;
+  height: auto;
   margin-top: 110px;
 }
 
@@ -102,6 +104,8 @@ header .logo-nav {
 .main-nosotros p {
   text-align: justify;
   margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .talleres {
@@ -508,7 +512,7 @@ footer .logosFooter img {
 }
 .contacto .contacto_div {
   width: 40%;
-  height: 600px;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -560,6 +564,7 @@ main {
   height: 75vh;
   margin-top: 110px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -576,15 +581,18 @@ main {
   box-shadow: 0px 0px 10px black;
 }
 .info-plastica div {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .info-plastica div h4 {
   align-items: center;
 }
 .info-plastica div p {
   text-align: justify;
-  width: 70%;
+  width: 80%;
   border-bottom: 1px solid black;
   padding: 15px;
 }
@@ -594,6 +602,7 @@ main {
   height: 75vh;
   margin-top: 110px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -610,15 +619,18 @@ main {
   box-shadow: 0px 0px 10px black;
 }
 .info-tango div {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .info-tango div h4 {
   align-items: center;
 }
 .info-tango div p {
   text-align: justify;
-  width: 70%;
+  width: 80%;
   border-bottom: 1px solid black;
   padding: 15px;
 }
@@ -628,6 +640,7 @@ main {
   height: 75vh;
   margin-top: 110px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -644,15 +657,18 @@ main {
   box-shadow: 0px 0px 10px black;
 }
 .info-radioteatro div {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .info-radioteatro div h4 {
   align-items: center;
 }
 .info-radioteatro div p {
   text-align: justify;
-  width: 70%;
+  width: 80%;
   border-bottom: 1px solid black;
   padding: 15px;
 }
@@ -662,6 +678,7 @@ main {
   height: 75vh;
   margin-top: 110px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -678,15 +695,18 @@ main {
   box-shadow: 0px 0px 10px black;
 }
 .info-musica div {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .info-musica div h4 {
   align-items: center;
 }
 .info-musica div p {
   text-align: justify;
-  width: 70%;
+  width: 80%;
   border-bottom: 1px solid black;
   padding: 15px;
 }
@@ -696,6 +716,7 @@ main {
   height: 75vh;
   margin-top: 110px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -712,15 +733,18 @@ main {
   box-shadow: 0px 0px 10px black;
 }
 .info-radio div {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .info-radio div h4 {
   align-items: center;
 }
 .info-radio div p {
   text-align: justify;
-  width: 70%;
+  width: 80%;
   border-bottom: 1px solid black;
   padding: 15px;
 }
@@ -745,6 +769,14 @@ main {
     width: 100%;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 990px) {
+  #navbarSupportedContent {
+    background-color: rgba(172, 190, 158, 0.8980392157);
+  }
+  #carouselExampleIndicators .carousel-inner {
+    height: auto;
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .f-listas .f-enlaces {
     display: flex;
@@ -765,6 +797,9 @@ main {
     justify-content: center;
     align-items: center;
     margin: 5px;
+  }
+  #carouselExampleIndicators .carousel-inner {
+    height: auto;
   }
   #noticias {
     display: grid;
@@ -871,19 +906,23 @@ main {
   #navbarSupportedContent {
     background-color: rgba(172, 190, 158, 0.8980392157);
   }
+  #navbarSupportedContent .nav-item {
+    margin: 2px;
+  }
   #pag-talleres {
     width: 100%;
-    height: 300vh;
+    height: auto;
   }
   #pag-talleres .info-taller {
     width: 100%;
     height: 70vh;
     display: flex;
     flex-direction: column;
+    margin: 20px;
   }
   #pag-talleres .info-taller div img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
   }
   #pag-talleres .info-taller div {
@@ -895,19 +934,18 @@ main {
   }
   .contacto {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
   }
   .contacto .contacto_div {
     width: 80%;
-    height: 90vh;
+    height: auto;
     align-self: center;
   }
   .contacto .contacto_div label, .contacto .contacto_div input {
-    margin: 1px;
     display: block;
   }
   #sectionUs .usIndex {
-    height: 45vh;
+    height: 70vh;
   }
   #sectionUs .usIndex .dondeHabita {
     width: 70%;
@@ -954,10 +992,10 @@ main {
   }
   #mainGaleria #galeria {
     width: 100%;
-    height: 250vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
@@ -969,8 +1007,8 @@ main {
     align-self: center;
   }
   #mainGaleria #galeria .fotoGaleria img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     justify-self: center;
     align-self: center;
@@ -980,15 +1018,22 @@ main {
   }
   .contacto {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
   }
   .contacto .contacto_div {
-    width: 500px;
-    height: 600px;
+    width: 65%;
+    height: auto;
     align-self: center;
   }
+  #carouselExampleIndicators .carousel-inner {
+    height: auto;
+  }
 }
-@media (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   #noticias {
     display: grid;
     width: 100%;
@@ -999,13 +1044,17 @@ main {
   }
   .navbar-collapse {
     background-color: rgba(172, 190, 158, 0.8980392157);
+    overflow: scroll;
+  }
+  .navbar-collapse .nav-item {
+    margin: 2px;
   }
   #mainGaleria #galeria {
     width: 100%;
-    height: 300vh;
+    height: 150vh;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
@@ -1016,19 +1065,25 @@ main {
     justify-self: center;
     align-self: center;
   }
+  #mainGaleria #galeria .fotoGaleria img {
+    width: 200px;
+    height: 200px;
+  }
   #pag-talleres {
     width: 100%;
     height: 300vh;
   }
   #pag-talleres .info-taller {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: ro2;
+    align-items: center;
+    justify-content: center;
   }
   #pag-talleres .info-taller div img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
   }
   #pag-talleres .info-taller div {
@@ -1043,18 +1098,19 @@ main {
     height: 100vh;
   }
   .contacto .contacto_div {
-    width: 80%;
-    height: 60%;
+    margin-top: 50px;
+    width: 60%;
+    height: 95%;
     align-self: center;
   }
   .contacto .contacto_div label, .contacto .contacto_div input {
     margin: 1px;
   }
   #sectionUs .usIndex {
-    height: 60vh;
+    height: 70vh;
   }
   #sectionUs .usIndex .dondeHabita {
-    width: 70%;
+    width: auto;
     height: auto;
   }
   #sectionUs img {
@@ -1076,6 +1132,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  #carouselExampleIndicators .carousel-inner {
+    height: auto;
   }
 }
 
