@@ -384,6 +384,24 @@ $light-green:#acbe9ee5;
     }
 
 //Nav Bar Collaps//    
+    header{
+
+        .navbar-collapse{
+            .navbar-nav{
+                .nav-item{
+                    margin: 5px;   
+                }
+                .dropdown-menu{
+                    overflow-y: scroll;
+                        li{
+                            margin:2px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
 
 }
 
@@ -406,7 +424,6 @@ $light-green:#acbe9ee5;
     }
     .navbar-collapse{
         background-color: $light-green;
-        overflow: scroll;
                 .nav-item{
                     margin: 2px;
                 }
