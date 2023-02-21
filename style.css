@@ -626,6 +626,10 @@ main {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px black;
+  animation-name: talleres-img;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .info-plastica div {
   width: 50%;
@@ -664,6 +668,10 @@ main {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px black;
+  animation-name: talleres-img;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .info-tango div {
   width: 50%;
@@ -702,6 +710,10 @@ main {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px black;
+  animation-name: talleres-img;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .info-radioteatro div {
   width: 50%;
@@ -740,6 +752,10 @@ main {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px black;
+  animation-name: talleres-img;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .info-musica div {
   width: 50%;
@@ -778,6 +794,10 @@ main {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 0px 10px black;
+  animation-name: talleres-img;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .info-radio div {
   width: 50%;
@@ -802,6 +822,14 @@ main {
   height: 75vh;
 }
 
+@keyframes talleres-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
 * {
   margin: 0;
   padding: 0;

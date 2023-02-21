@@ -56,7 +56,6 @@ main{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
         div{
             width: 50%;
             display: flex;
@@ -66,6 +65,11 @@ main{
                 @include size (400px, 400px);
                 border-radius: 100%;
                 box-shadow: 0px 0px 10px black;
+                animation-name: talleres-img;
+                animation-iteration-count: initial;
+                animation-timing-function: ease-in;
+                animation-duration: 2s;
+
             }        
         }
         div{
@@ -91,5 +95,17 @@ main{
 .info-taller:hover{
     background-color: rgba(219, 217, 217, 0.568);
     @include size (100%, 75vh);
+}
+
+//Animacion//
+
+@keyframes talleres-img{
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100;
+    }
 }
 
